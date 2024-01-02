@@ -1,0 +1,11 @@
+.taskForm{
+  width: 90%;
+  margin-bottom: 0px;
+}
+
+.taskTd {
+  word-break: break-all;
+  word-wrap: break-word;
+  white-space: normal;
+  min-width: 150px;
+}

@@ -1,0 +1,7 @@
+build/
+node_modules/
+dist/
+.eslintrc.js
+src/reportWebVitals.ts
+codegen.ts
+src/graphql/types.ts
