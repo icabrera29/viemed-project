@@ -1,6 +1,6 @@
 import React from 'react';
 
-import {Container, Heading, Text, VStack} from '@chakra-ui/react';
+import {Heading, Text, VStack} from '@chakra-ui/react';
 
 import AddTask from './AddTask';
 import TasksTable from './TasksTable';
@@ -17,14 +17,7 @@ const Tasks: React.FC = () => {
   };
 
   return (
-    <Container
-      maxW="800px"
-      minHeight="100vh"
-      justifyContent="start"
-      centerContent
-      display="flex"
-      flexDirection="column"
-      gap={20}>
+    <>
       <VStack spacing={5} align="center" marginTop={65}>
         <Heading>Add your tasks</Heading>
         <Text onClick={handleLogout} as="u" cursor="pointer">
@@ -33,7 +26,7 @@ const Tasks: React.FC = () => {
       </VStack>
       <AddTask refetch={refetch} />
       <TasksTable tasks={data} refetch={refetch} loading={loading} />
-    </Container>
+    </>
   );
 };
 

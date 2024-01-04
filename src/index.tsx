@@ -2,17 +2,20 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import {ApolloProvider} from '@apollo/client';
 import {ChakraProvider} from '@chakra-ui/react';
+import {BrowserRouter} from 'react-router-dom';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import {client} from './graphql/config';
 
 const root = ReactDOM.createRoot(document.getElementById('root')!);
 root.render(
-  <ApolloProvider client={client}>
-    <ChakraProvider>
-      <App />
-    </ChakraProvider>
-  </ApolloProvider>,
+  <BrowserRouter>
+    <ApolloProvider client={client}>
+      <ChakraProvider>
+        <App />
+      </ChakraProvider>
+    </ApolloProvider>
+  </BrowserRouter>,
 );
 
 // If you want to start measuring performance in your app, pass a function
